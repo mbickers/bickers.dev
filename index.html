@@ -11,152 +11,9 @@
         <meta name="author" content="Max Bickers">
         <meta name="description" content="Hi, I'm Max, a computer science student at the University of Michigan.">
 
+        <link rel="stylesheet" type="text/css" href="style.css">
+
         <title>Max Bickers</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Open+Sans:wght@300;400&display=swap');
-
-body {
-    box-sizing: border-box;
-}
-
-
-#wrapper {
-    max-width: 1024px;
-    margin: auto;
-    margin-bottom: 6em;
-}
-
-section {
-    margin: 1.4em;
-    margin-top: 1.2em;
-    margin-bottom: 4em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-}
-
-hr {
-    display: block;
-    border: 0;
-    border-top: 3px solid black;
-    padding: 0;
-
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-    margin-left: -1.5em;
-    margin-right: -1.5em;
-}
-
-hr + :not(h1) {
-    margin-top: 1.5em;
-}
-
-#welcome {
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-}
-
-#welcome p {
-    margin-top: 0.2em;
-}
-
-
-.section-flex-grid {
-    display: block;
-
-    flex-wrap: wrap;
-}
-
-.section-flex-item {
-    display: block;
-
-    flex: 1;
-
-    /* Don't want more than 2 columns per row */
-    min-width: 40%;
-}
-
-
-.project-flex-grid {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.project-flex-item {
-    opacity: 0.7;
-
-    color: white;
-
-    margin-bottom: 1.4em;
-
-    flex: 1;
-    height: 11em;
-
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#tallybook {
-    background-color: #34C759;
-}
-
-#website {
-    background-color: #777777;
-}
-
-.project-front {
-    margin: auto;
-}
-
-.project-front h1 {
-    text-align: center;
-}
-
-
-
-@media screen and (min-width: 800px) {
-    #welcome {
-        width: 40%;
-    }
-
-    .section-flex-grid {
-        display: flex;
-    }
-}
-
-
-
-h1 {
-    margin: 0;
-
-    font-size: 1.4rem;
-    line-height: 1.7;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-h1 a {
-    margin-right: .35em;
-}
-
-p, li {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-ul {
-    margin-top: -1em;
-}
-
-strong {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-}
-
-</style>
 
     </head>
 
@@ -187,18 +44,35 @@ strong {
                 <section class="section-flex-item">
                     <h1>Projects</h1>
                     <hr>
-                    <div class="project-flex-grid">
-                        <a class="project-flex-item" id="tallybook">
-                            <div class="project-front">
-                                <h1>Tallybook</h1>
-                            </div>
-                        </a>
 
-                        <a class="project-flex-item" id="website">
-                            <div class="project-front">
-                                <h1>Personal Site</h1>
-                            </div>
-                        </a>
+                    <div>
+                        <p>
+                        <strong>Tallybook</strong>
+                        <br>
+                        November 2019 &ndash; May 2020
+                        </p>
+                        <ul>
+                            <li>iOS app to keep track of daily tasks</li>
+                            <li>Prototyped with Adobe XD</li>
+                            <li> Written in Swift with SwiftUI and UIKit</li>
+                        </ul>
+                        <p class="project-links">
+                        <a href="test">github</a>
+                        </p>
+                    </div>
+
+                    <div>
+                        <p>
+                        <strong>Personal Website</strong>
+                        <br>
+                        June 2020
+                        </p>
+                        <ul>
+                            <li>Pretty dope NGL</li>
+                        </ul>
+                        <p class="project-links">
+                        <a href="test">github</a>
+                        </p>
                     </div>
                 </section>
 

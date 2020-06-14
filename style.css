@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Open+Sans:wght@300;400&display=swap');
+
+body {
+    box-sizing: border-box;
+}
+
+
+#wrapper {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 6em;
+}
+
+section {
+    margin: 1.4em;
+    margin-top: 1.2em;
+    margin-bottom: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: 3px solid black;
+    padding: 0;
+
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
+hr + :not(h1) {
+    margin-top: 1.5em;
+}
+
+#welcome {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
+#welcome p {
+    margin-top: 0;
+}
+
+
+.section-flex-grid {
+    display: block;
+
+    flex-wrap: wrap;
+}
+
+.section-flex-item {
+    display: block;
+
+    flex: 1;
+
+    /* Don't want more than 2 columns per row */
+    min-width: 40%;
+}
+
+
+.project-links {
+    margin-top: 0;
+}
+
+.project-links a {
+    color: black;
+}
+
+@media screen and (min-width: 200px) {
+    #welcome {
+        width: 40%;
+    }
+
+    .section-flex-grid {
+        display: flex;
+    }
+}
+
+
+
+h1, h2 {
+    margin: 0;
+
+    font-size: 1.4rem;
+    line-height: 1.7;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 a {
+    margin-right: .35em;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+ul {
+    margin-top: -1em;
+    margin-bottom: 0;
+}
+
+strong {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+
