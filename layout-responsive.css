@@ -1,0 +1,37 @@
+#resume-email, #header-resume-info, #resume-about {
+    display: none;
+}
+
+#welcome {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+}
+
+#welcome p {
+    margin-top: 0;
+}
+
+.section-flex-grid {
+    display: block;
+
+    flex-wrap: wrap;
+}
+
+.section-flex-item {
+    display: block;
+
+    flex: 1;
+
+    /* Don't want more than 2 columns per row */
+    min-width: 40%;
+}
+
+@media screen and (min-width: 500px) {
+    #welcome {
+        width: 40%;
+    }
+
+    .section-flex-grid {
+        display: flex;
+    }
+}

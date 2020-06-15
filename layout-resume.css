@@ -1,0 +1,38 @@
+body {
+    width: 8.5in;
+    height: 11in;
+
+    font-size: 85%;
+}
+
+.project-links, #welcome, #header-links {
+    display: none;
+}
+
+#resume-email {
+    float: right;
+}
+
+#header-resume-info {
+    width: 100%;
+    text-align-last: justify;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.section-flex-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+.section-flex-item {
+    display: block;
+
+    flex: 1;
+
+    /* Don't want more than 2 columns per row */
+    min-width: 40%;
+}
