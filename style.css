@@ -54,6 +54,9 @@ h1, h2 {
 h1 a {
     text-decoration: none;
     color: black;
+}
+
+#header-links a {
     margin-right: .35em;
 }
 
