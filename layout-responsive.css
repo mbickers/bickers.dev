@@ -1,5 +1,9 @@
-#resume-email, #header-resume-links, #resume-about {
+.resume-only, #header-float {
     display: none;
+}
+
+.header-flex-item {
+    margin-right: .35em;
 }
 
 #welcome {

@@ -5,20 +5,22 @@ body {
     font-size: 85%;
 }
 
-.project-links, #welcome, #header-links {
-    display: none;
+.project-links, .resume-hidden {
+    display: none !important;
 }
 
-#resume-email {
-    float: right;
+.header-flex-container {
+    display: flex;
+    justify-content: space-between;
 }
 
-#header-resume-links {
-    width: 100%;
-    text-align-last: justify;
+.header-flex-item img {
+    vertical-align: -0.05em;
+    height: 0.9em;
+    padding-right: 0.15em;
 }
 
-section {
+header, section {
     margin-bottom: 2em;
 }
 
