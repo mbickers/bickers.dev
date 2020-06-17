@@ -5,7 +5,7 @@ body {
     font-size: 85%;
 }
 
-.project-links, .resume-hidden {
+.project-links, .resume-hidden, #background-canvas {
     display: none !important;
 }
 
