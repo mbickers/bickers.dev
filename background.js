@@ -27,9 +27,10 @@ function createMap(w, h) {
     for (var x = 0; x < w; x++) {
         map[x] = new Array(h);
         for (var y = 0; y < h; y++) {
-            map[x][y] = 0;
-            for (var i = 0; i < NUM_WAVES; i++) {
-                map[x][y] += amp[i] * Math.cos(2*Math.PI*(x_freqs[i]*x + y_freqs[i]*y) + phase[i]);
+            if (x % 30 == 0 || y % 30 == 0) {
+                map[x][y] = 255;
+            } else {
+                map[x][y] = 0;
             }
         }
     }
@@ -62,20 +63,20 @@ function draw() {
     var h = canvas.height;
 
     var imageData = ctx.getImageData(0, 0, w, h);
+    w = imageData.width;
+    h = imageData.height;
     var pixels = imageData.data;
 
-    console.log("Drawing");
-    for (var x = 0; x < w; x++) {
-        for (var y = 0; y < h; y++) {
-            pixels[4 * (x*h + y)] = 128 - map[x][y];
-            pixels[4 * (x*h + y) + 1] = 128 - map[x][y];
-            pixels[4 * (x*h + y) + 2] = 128 - map[x][y];
-            pixels[4 * (x*h + y) + 3] = 255;
+    for (var y = 0; y < h; y++) {
+        for (var x = 0; x < w; x++) {
+            pixels[4 * (y*w + x) + 0] = 255 - map[x][y];
+            pixels[4 * (y*w + x) + 1] = 255;
+            pixels[4 * (y*w + x) + 2] = 255;
+            pixels[4 * (y*w + x) + 3] = 255;
         }
     }
 
     ctx.putImageData(imageData, 0, 0);
-    console.log("DOne Drawing");
 }
 
 window.onload = function() {
