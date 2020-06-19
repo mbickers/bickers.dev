@@ -8,16 +8,19 @@ body {
 
 #background-canvas {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
 }
 
 #wrapper {
+    position: relative;
+    z-index: 1;
+
     max-width: 1024px;
     margin: auto;
     margin-bottom: 6em;
-
-    z-index: 1;
 }
 
 header, section {
