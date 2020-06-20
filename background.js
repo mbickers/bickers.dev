@@ -1,36 +1,65 @@
 
-var map = [[]];
 
-let NUM_WAVES = 30;
-let MAX_FREQ = 100;
-
-function rand_uniform(x) {
-    return Math.random()*2*x - x;
-}
-
-function createMap(w, h) {
-    var x_freqs = new Array(NUM_WAVES);
-    var y_freqs = new Array(NUM_WAVES);
-    var phase = new Array(NUM_WAVES);
-    var amp = new Array(NUM_WAVES);
-
-    for (var i = 0; i < NUM_WAVES; i++) {
-        x_freqs[i] = rand_uniform(MAX_FREQ);
-        y_freqs[i] = rand_uniform(MAX_FREQ);
-        phase[i] = rand_uniform(Math.PI / 2);
-        amp[i] = rand_uniform(10);
+function rand_gaussian(sigma) {
+    var u1 = 0;
+    while (u1 === 0) {
+        u1 = Math.random();
     }
 
+    var u2 = Math.random();
+
+    var z0 = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+
+    return z0 * sigma;
+}
+
+
+var map = [[0]];
+
+let MIN_WAVELENGTH_COMPONENT_PX = 100;
+let SPECTRAL_EXP = 2;
+let AMP_FACTOR = 30;
+
+function createMap(w, h) {
+
+    var max_freq_x = Math.floor(w/MIN_WAVELENGTH_COMPONENT_PX);
+    var max_freq_y = Math.floor(h/MIN_WAVELENGTH_COMPONENT_PX);
+
+    var phase = new Array(max_freq_x + 1);
+    var amp = new Array(max_freq_x + 1);
+
+    for (var freq_x = 0; freq_x <= max_freq_x; freq_x++) {
+        phase[freq_x] = new Array(max_freq_y + 1);
+        amp[freq_x] = new Array(max_freq_y + 1);
+        for (var freq_y = 0; freq_y <= max_freq_y; freq_y++) {
+            if (freq_x == 0 && freq_y == 0) {
+                continue;
+            }
+
+            phase[freq_x][freq_y] = Math.random() * Math.PI;
+
+            var spectral_factor = Math.pow(freq_x*freq_x + freq_y*freq_y, -SPECTRAL_EXP/2)
+            amp[freq_x][freq_y] = rand_gaussian(AMP_FACTOR) * spectral_factor;
+        }
+    }
     
     map = new Array(w);
 
     for (var x = 0; x < w; x++) {
         map[x] = new Array(h);
         for (var y = 0; y < h; y++) {
-            if (x % 30 == 0 || y % 30 == 0) {
-                map[x][y] = 255;
-            } else {
-                map[x][y] = 0;
+            map[x][y] = 0;
+
+
+            for (var freq_x = 0; freq_x <= max_freq_x; freq_x++) {
+                for (var freq_y = 0; freq_y <= max_freq_y; freq_y++) {
+                    if (freq_x == 0 && freq_y == 0) {
+                        continue;
+                    }
+
+                    var angle = 2 * Math.PI * (freq_x * x / w + freq_y * y / h);
+                    map[x][y] += amp[freq_x][freq_y] * Math.cos(angle + phase[freq_x][freq_y]);
+                }
             }
         }
     }
@@ -69,9 +98,9 @@ function draw() {
 
     for (var y = 0; y < h; y++) {
         for (var x = 0; x < w; x++) {
-            pixels[4 * (y*w + x) + 0] = 255 - map[x][y];
-            pixels[4 * (y*w + x) + 1] = 255;
-            pixels[4 * (y*w + x) + 2] = 255;
+            pixels[4 * (y*w + x) + 0] = 128 + map[x][y];
+            pixels[4 * (y*w + x) + 1] = 128 + map[x][y];
+            pixels[4 * (y*w + x) + 2] = 128 + map[x][y];
             pixels[4 * (y*w + x) + 3] = 255;
         }
     }
