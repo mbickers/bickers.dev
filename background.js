@@ -18,18 +18,15 @@ function draw() {
     var w = canvas.width;
     var h = canvas.height;
 
-    var imageData = ctx.getImageData(0, 0, w, h);
-    w = imageData.width;
-    h = imageData.height;
+    var imageData = new ImageData(w, h);
     var pixels = imageData.data;
 
+    var offset = window.pageYOffset;
 
-    var max = Math.max(w, h);
-
-    for (var y = 0; y < h; y += 8) {
+    for (var y = Math.floor(offset*-0.1) % 8; y < h; y += 8) {
         for (var x = 0; x < w; x += 8) {
-            var u = x/max;
-            var v = y/max;
+            var u = x/4000;
+            var v = (y + 0.5*offset)/4000;
 
             var expr = Math.sin(31*u + 27*v) + 5*Math.cos(5*u - 3*v) + Math.sin(20*u) + Math.cos(20*v);
             var normalized = (expr + 8) / 16;
@@ -40,8 +37,8 @@ function draw() {
 
             var slope = Math.sqrt(du*du + dv*dv);
 
-            if (normalized % (0.04) < 0.0005 * slope) {
-                pixels[4 * (y*w + x) + 3] = 200;
+            if (normalized % 0.04 < 0.0005 * slope) {
+                pixels[4 * (y*w + x) + 3] = 150;
             }
         }
     }
@@ -49,5 +46,10 @@ function draw() {
     ctx.putImageData(imageData, 0, 0);
 }
 
-window.onload = handleResize; 
+window.onload = function() {
+    window.onscroll = function(e) {
+        window.requestAnimationFrame(draw);
+    };
+    handleResize(); 
+};
 window.onresize = handleResize;
