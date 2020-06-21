@@ -23,13 +23,25 @@ function draw() {
     h = imageData.height;
     var pixels = imageData.data;
 
-    for (var y = 0; y < h; y++) {
-        for (var x = 0; x < w; x++) {
-            if ((x + y) % 9 == 0 && y % 10 == 0) {
-                pixels[4 * (y*w + x) + 0] = 0;
-                pixels[4 * (y*w + x) + 1] = 0; 
-                pixels[4 * (y*w + x) + 2] = 0;
-                pixels[4 * (y*w + x) + 3] = 255;
+
+    var max = Math.max(w, h);
+
+    for (var y = 0; y < h; y += 8) {
+        for (var x = 0; x < w; x += 8) {
+            var u = x/max;
+            var v = y/max;
+
+            var expr = Math.sin(31*u + 27*v) + 5*Math.cos(5*u - 3*v) + Math.sin(20*u) + Math.cos(20*v);
+            var normalized = (expr + 8) / 16;
+
+
+            var du = -31*Math.cos(31*u + 27*v) + 5*Math.sin(5*u - 3*v) + -20*Math.cos(20*u);
+            var dv = -27*Math.cos(31*u + 27*v) + -3*Math.sin(5*u - 3*v) + 20*Math.sin(20*v);
+
+            var slope = Math.sqrt(du*du + dv*dv);
+
+            if (normalized % (0.04) < 0.0005 * slope) {
+                pixels[4 * (y*w + x) + 3] = 200;
             }
         }
     }
@@ -39,4 +51,3 @@ function draw() {
 
 window.onload = handleResize; 
 window.onresize = handleResize;
-
