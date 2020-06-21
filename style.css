@@ -91,3 +91,7 @@ strong {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
+
+.no-break {
+    white-space: nowrap;
+}
