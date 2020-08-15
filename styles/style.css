@@ -71,7 +71,7 @@ h1, h2, .header-flex-item {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.header-flex-item, #header-float {
+h1 a, .header-flex-item, #header-float {
     text-decoration: none;
     color: black;
 }
