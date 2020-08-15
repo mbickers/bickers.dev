@@ -1,5 +1,5 @@
 function resumeFormat() {
-    document.styleSheets[1].disabled = true;
+    document.styleSheets[2].disabled = true;
     document.getElementById("resume-stylesheet").removeAttribute("disabled");
 }
 

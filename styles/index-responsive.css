@@ -11,26 +11,7 @@
     margin-bottom: 13vh;
 }
 
-#welcome p {
-    margin-top: 0;
-    display: block;
-}
-
-.section-flex-grid {
-    display: block;
-
-    flex-wrap: wrap;
-}
-
-.section-flex-item {
-    display: block;
-
-    flex: 1;
-
-    /* Don't want more than 2 columns per row */
-    min-width: 40%;
-}
-
+/* Responsive Layout */
 @media screen and (min-width: 800px) {
     #welcome {
         width: 40%;
@@ -41,7 +22,7 @@
     }
 }
 
-
+/* Animation */
 @keyframes appear {
     from {
         opacity: 0;

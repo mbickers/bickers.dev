@@ -1,0 +1,38 @@
+section {
+    margin: 1.4em;
+    margin-bottom: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+.header-flex-item {
+    margin-right: .35em;
+}
+
+.project-links {
+    margin-top: 0;
+}
+
+#welcome p {
+    margin-top: 0;
+    display: block;
+}
+
+.section-flex-grid {
+    display: block;
+
+    flex-wrap: wrap;
+}
+
+.section-flex-item {
+    display: block;
+
+    flex: 1;
+
+    /* Don't want more than 2 columns per row */
+    min-width: 40%;
+}
+
+#header-float {
+    float: right;
+}

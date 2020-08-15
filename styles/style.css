@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Open+Sans:wght@300;400&display=swap');
 
+/* Document */
 body {
     box-sizing: border-box;
     margin: 0;
@@ -23,15 +24,14 @@ body {
     margin-bottom: 6em;
 }
 
+/* Header/Sections */
 header, section {
     margin: 1.4em;
+    margin-top: 0;
     margin-bottom: 4em;
+
     padding-left: 1.5em;
     padding-right: 1.5em;
-}
-
-header {
-    margin-top: 0;
     padding-top: 1.2em;
 }
 
@@ -47,22 +47,6 @@ hr {
     margin-right: -1.5em;
 }
 
-hr + :not(.header-flex-container) {
-    margin-top: 1.5em;
-}
-
-#header-float {
-    float: right;
-}
-
-.project-links {
-    margin-top: 0;
-}
-
-a {
-    color: black;
-}
-
 h1, h2, .header-flex-item {
     margin: 0;
 
@@ -73,9 +57,9 @@ h1, h2, .header-flex-item {
 
 h1 a, .header-flex-item, #header-float {
     text-decoration: none;
-    color: black;
 }
 
+/* Text */
 p, li {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -85,6 +69,10 @@ p, li {
 ul {
     margin-top: -1em;
     margin-bottom: 0;
+}
+
+a {
+    color: black;
 }
 
 strong {
