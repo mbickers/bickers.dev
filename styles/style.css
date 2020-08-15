@@ -59,7 +59,7 @@ hr + :not(.header-flex-container) {
     margin-top: 0;
 }
 
-.project-links a {
+a {
     color: black;
 }
 
