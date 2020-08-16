@@ -2,6 +2,10 @@
     display: none;
 }
 
+#wrapper {
+    margin-top: 1em;
+}
+
 .header-flex-item {
     margin-right: .35em;
 }
