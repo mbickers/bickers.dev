@@ -1,31 +1,14 @@
-section {
-    margin: 1.4em;
-    margin-bottom: 4em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+#solid-background {
+    background-color: transparent;
 }
 
-.header-flex-item {
-    margin-right: .35em;
-}
-
-.project-links {
-    margin-top: 0;
-}
-
-#welcome p {
-    margin-top: 0;
+#resume-flex-grid {
     display: block;
-}
-
-.section-flex-grid {
-    display: block;
-
     flex-wrap: wrap;
 }
 
-.section-flex-item {
-    display: block;
+.resume-flex-item {
+    margin-bottom: 3em;
 
     flex: 1;
 
@@ -33,6 +16,65 @@ section {
     min-width: 40%;
 }
 
-#header-float {
-    float: right;
+#welcome {
+    margin-top: 13vh;
+    margin-bottom: 13vh;
+}
+
+#welcome p {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.resume-flex-item hr {
+    margin-bottom: 0;
+}
+
+h3 {
+    display: inline-block;
+    width: 100%;
+}
+
+#skills-interests p, .resume-flex-item h3 {
+    margin: 1em 0 0;
+}
+
+.resume-flex-item p, .resume-flex-item ul {
+    margin: 0;
+}
+
+/* Responsive Layout */
+@media screen and (min-width: 800px) {
+    #welcome {
+        width: 50%;
+    }
+
+    #resume-flex-grid {
+        display: flex;
+    }
+
+    #experience, #projects {
+        margin-right: 5em;
+    }
+}
+
+/* Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(7vh) scale(0.9);
+    }
+
+    to {
+        opacity 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+#welcome h2 {
+    animation: appear ease 2.5s;
+}
+
+#welcome p {
+    animation: appear ease 2s 0.5s both;
 }

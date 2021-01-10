@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/</loc>
+    <lastmod>2020-10-26T20:32:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/</loc>
+    <lastmod>2020-10-26T20:32:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/yes-we-still-can/</loc>
+    <lastmod>2020-10-26T20:32:19-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/zionist-israel-and-the/</loc>
+    <lastmod>2020-10-26T16:14:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/naive-set-theory/</loc>
+    <lastmod>2020-10-25T20:50:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/the-cpp-programming-language/</loc>
+    <lastmod>2020-10-25T14:37:37-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/seven-programming-languages/</loc>
+    <lastmod>2020-09-26T22:30:55-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bickers.dev/bookshelf/advanced-programming-unix-environment/</loc>
+    <lastmod>2020-09-26T21:05:17-04:00</lastmod>
+  </url>
+  
+</urlset>

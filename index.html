@@ -1,198 +1,125 @@
 <!DOCTYPE html>
-
-<!-- Hi. I'm Max. Welcome to my source code. -->
-
-
-<html lang="en">
+<html>
     <head>
+	<meta name="generator" content="Hugo 0.75.1" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170218748-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-170218748-1');
-        </script>
-
-
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <meta name="author" content="Max Bickers">
-        <meta name="description" content="Hi, I'm Max, a computer science student at the University of Michigan.">
+        <title>Max Bickers | bickers.dev</title>
 
         <link rel="stylesheet" type="text/css" href="/styles/style.css">
-        <link rel="stylesheet" type="text/css" href="/styles/index.css">
-        <link id="responsive-stylesheet" rel="stylesheet" type="text/css" href="/styles/index-responsive.css">
-        <link id="resume-stylesheet" rel="stylesheet" type="text/css" href="/styles/index-resume.css" disabled>
-
         <script src="/scripts/background.js"></script>
-        <script src="/scripts/resume.js"></script>
+        <link rel="icon" type="image/png" href="/favicon.png">
 
-        <title>Max Bickers</title>
+        
+<link rel="stylesheet" type="text/css" href="/styles/index.css">
 
     </head>
-
     <body>
-
         <canvas id="background-canvas"></canvas>
 
         <div id="wrapper">
-
-            <header>
-                <h1>
-                    <a href="https://bickers.dev">Max Bickers</a>
-                    <span id="header-float"><a href="https://bickers.dev">bickers.dev</a></span>
-                </h1>
-                <hr>
-                <div class="resume-hidden header-flex-container">
-                    <a class="header-flex-item" href="/MaxBickersResume.pdf">resume</a>
-                    <a class="header-flex-item" href="https://www.linkedin.com/in/maxbickers/">linkedin</a>
-                    <a class="header-flex-item" href="https://github.com/mbickers">github</a>
-                    <a class="header-flex-item" href="mailto:mbickers@umich.edu">email</a>
-                </div>
-
-                <div class="resume-only header-flex-container">
-                    <a class="header-flex-item" href="mailto:mbickers@umich.edu">mbickers@umich.edu</a>
-                    <span id="phone-number" class="header-flex-item"></span>
-                    <a class="header-flex-item" href="https://linkedin.com/in/maxbickers">linkedin.com/in/maxbickers</a>
-                    <a class="header-flex-item" href="https://github.com/mbickers">
-                        <img src="images/github.png" alt="github:">
-                        mbickers
-                    </a>
-                </div>
-            </header>
-
-            <section id="welcome">
-                <h2 class="resume-hidden">Hi. I'm Max.</h2>
-                <p>
-                    I'm a second year student at the University of Michigan studying computer science and math.
-                    I'm interested in high performance computing, computer architecture and cryptography.
-                </p>
-                <p class="resume-hidden">
-                    Check out my <a href="/reviews.html">book reviews</a>.
-                </p>
-            </section>
-
-
-            <div class="section-flex-grid">
-                <section class="section-flex-item">
-                    <h2>Experience</h2>
+            <div id="solid-background">
+                <header>
+                    <h1>
+                        <a href="/">Max Bickers</a>
+                    </h1>
                     <hr>
-                    <p>
-                        <strong>Apple: Software Engineering Intern (Embedded Field Diagnostics)</strong>
-                        <br>
-                        Summer 2020
-                    </p>
-                    <ul>
-                        <li>Developed iOS app to configure and run internal device diagnostic programs</li>
-                        <li>Implemented new features to improve single and multi-device workflows</li>
-                        <li>Utilized Git and internal issue tracking software. Wrote user and maintenance documentation with Confluence</li>
-                    </ul>
-
-                    <p>
-                        <strong>Avli Restaurant: Concessions Cashier</strong>
-                        <br>
-                        Summer 2019
-                    </p>
-                    <ul>
-                        <li>Handled setting the schedule, tracking hours, stocking food and opening/closing</li>
-                        <li>Assisted customers by cashiering and preparing food</li>
-                    </ul>
-                </section>
-
-                <section class="section-flex-item">
-                    <h2>Education</h2>
-                    <hr>
-                    <p>
-                        <strong>University of Michigan</strong>
-                        <br>
-                        BSE Computer Science, Mathematics Minor
-                    </p>
-                    <ul>
-                        <li>Estimated Graduation Date: April 2022</li>
-                        <li>GPA: 3.92</li>
-                        <li>Coursework: Data Structures and Algorithms, Foundations of Computer Science, Introduction to Computer Organization, Introduction to Machine Learning, Introduction to Probability, Linear Algebra</li>
-                    </ul>
-
-                    <p>
-                        <strong>Coursera</strong>
-                    </p>
-                    <ul>
-                        <li>From the Big Bang to Dark Energy, University of Tokyo</li>
-                        <li>Medical Neuroscience, Duke University</li>
-                        <li>Machine Learning, Stanford</li>
-                    </ul>
-
-                    <p>
-                        <strong>New Trier High School</strong>
-                    </p>
-                    <ul>
-                        <li>National Merit Scholar</li>
-                    </ul>
-                </section>
-
-                <section class="section-flex-item">
-                    <h2>Projects</h2>
-                    <hr>
-
-                    <div>
-                        <p>
-                        <strong>Tallybook</strong>
-                        <br>
-                        November 2019 &ndash; May 2020
-                        </p>
-                        <ul>
-                            <li>iOS app to keep track of daily tasks</li>
-                            <li>Prototyped with Adobe XD</li>
-                            <li>Written in Swift with SwiftUI and UIKit</li>
-                        </ul>
-                        <p class="project-links">
-                        <a href="https://github.com/mbickers/tallybook">github</a>
-                        </p>
+                    <div class="header-flex-container">
+                        <a class="header-flex-item" href="/">about</a>
+                        <a class="header-flex-item" href="/bookshelf">bookshelf</a>
+                        <a class="header-flex-item" href="mailto:mbickers@umich.edu">contact</a>
                     </div>
+                </header>
 
-                    <div>
-                        <p>
-                        <strong>Personal Website</strong>
-                        <br>
-                        June 2020 &ndash; Ongoing
-                        </p>
-                        <ul>
-                            <li>Created responsive website to showcase my projects and experience</li>
-                            <li>Developed script to create formatted resume from website content</li>
-                        </ul>
-                        <p class="project-links">
-                            <a href="https://github.com/mbickers/personal-website">github</a>
-                        </p>
-                    </div>
-                </section>
+                
+<div id="welcome">
+    
+    <h2>Hi. I&rsquo;m Max.</h2>
+<p>I&rsquo;m a second year student at the University of Michigan studying computer science and math. I&rsquo;m interested in high performance computing, computer architecture and cryptography.</p>
+<div  class="link-row" >
+<p><a href="https://github.com/mbickers">github</a>
+<a href="https://www.linkedin.com/in/maxbickers">linkedin</a>
+<a href="/MaxBickersResume.pdf">resume</a>
+<a href="mailto:mbickers@umich.edu">email</a></p>
+</div>
 
-                <section class="section-flex-item">
-                    <h2>Skills and Interests</h2>
-                    <hr>
-                    <p>
-                    <strong>Languages: </strong>Python, C++, Swift, <span class="no-break">Objective-C</span>
-                    </p>
-                    <p>
-                        <strong>Technologies: </strong>Git, LaTeX, HTML5
-                    </p>
-                    <p>
-                        <strong>Platforms: </strong>iOS, macOS, Linux
-                    </p>
-                    <p class="resume-hidden">
-                        I love reading, and I just started publishing <a href="/reviews.html">book reviews</a>.
-                    </p>
-                    <p class="resume-only">
-                        I love reading, and I just started publishing book reviews on my website.
-                    </p>
-                </section>
+    
+</div>
+
+<div id="resume-flex-grid">
+    
+    <div  class="resume-flex-item"  id="experience" >
+<h2>Experience</h2>
+<hr>
+<h3>Stripe: Software Engineering Intern <span class="float-right">Summer 2021</span></h3>
+<h3>Apple: Software Engineering Intern <span class="float-right">Summer 2020</span></h3>
+<p>Embedded Field Diagnostics Team</p>
+<ul>
+<li>Developed iOS app to configure and run internal device diagnostic programs</li>
+<li>Implemented new features to improve single and multi-device workflows</li>
+<li>Utilized Git and internal issue tracking software. Wrote user and maintenance documentation with Confluence</li>
+</ul>
+</div>
+<div  class="resume-flex-item"  id="education" >
+<h2>Education</h2>
+<hr>
+<h3>University of Michigan <span class="float-right">Aug 2019 – Present</span></h3>
+<p>BSE Computer Science, Mathematics Minor (3.95 GPA).</p>
+<p><span tooltip="If it matches, I took it: /EECS (2(03|8[01])|37[06]|4(45|8[12]))|Math (2(1[67]|97)|425)|Stats 426/gi"> Advanced Coursework: Machine Learning, Software Engineering, Operating Systems, Introduction to Theoretical Statistics, Linear Algebra, Introduction to Analysis.  </span></p>
+<h3>Coursera</h3>
+<ul>
+<li>From the Big Bang to Dark Energy, University of Tokyo</li>
+<li>Medical Neuroscience, Duke University</li>
+<li>Machine Learning, Stanford</li>
+</ul>
+<h3>New Trier High School</h3>
+<ul>
+<li>National Merit Scholar</li>
+</ul>
+</div>
+<div  class="resume-flex-item"  id="projects" >
+<h2>Projects</h2>
+<hr>
+<h3>Clippy <span class="float-right">December 2020 – Present</span></h3>
+<p>Clippy is a tool for transferring files between computers by temporarily storing them online.</p>
+<ul>
+<li>Collaborated with a friend to build a server, client library and command line interface in Go</li>
+<li>Worked on features including rate-limiting, directory upload and mnemomic creator</li>
+</ul>
+<div  class="link-row" >
+    <p><a href="https://github.com/evanweissburg/clippy">github</a></p>
+</div>
+<h3>Personal Website <span class="float-right">June 2020 – Present</span></h3>
+<ul>
+<li>Created responsive website to showcase my resume and book reviews</li>
+<li>Built front-end from scratch, set up static compilation with Hugo</li>
+</ul>
+<div  class="link-row" >
+    <p><a href="https://github.com/mbickers/personal-site">github</a></p>
+</div>
+<h3>Tallybook <span class="float-right">November 2019 – May 2020</span></h3>
+<p>Tallybook is an iOS app to keep track of daily tasks</p>
+<ul>
+<li>Developed in Swift with SwiftUI and UIKit</li>
+</ul>
+<div  class="link-row" >
+    <p><a href="https://github.com/mbickers/tallybook">github</a></p>
+</div>
+</div>
+<div  class="resume-flex-item"  id="skills-interests" >
+<h2>Skills and Interests</h2>
+<hr>
+<p><strong>Languages:</strong> Python, C++, Go, Swift, Objective-C</p>
+<p><strong>Technologies:</strong> Git, LaTeX, HTML5</p>
+<p><strong>Platforms:</strong> iOS, macOS, Linux</p>
+<p>I love reading, and I just started publishing <a href="https://bickers.dev/bookshelf">book reviews</a> on my website.</p>
+</div>
+
+    
+</div>
+
             </div>
-
         </div>
-
     </body>
-
 </html>
